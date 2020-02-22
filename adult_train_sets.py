@@ -19,5 +19,5 @@ to_drop = [column for column in upper.columns if any(upper[column] > 0.7)]
 train, test = train_test_split(df, test_size=0.2, shuffle=True)
 
 train.to_csv("train.csv", sep = ";", encoding = "utf-8", index = False, header = False)
-test.to_csv("train.csv", sep = ";", encoding = "utf-8", index = False, header = False)
+test.to_csv("test.csv", sep = ";", encoding = "utf-8", index = False, header = False)
 
