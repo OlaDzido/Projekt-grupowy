@@ -19,3 +19,6 @@ for col in df.head(0):
     df[col] = df[col].astype('category')
 for col in df.head(0):
     df[col] = df[col].cat.codes
+corr_matrix = df.corr().abs()
+upper = corr_matrix.where(np.triu(np.ones_like(corr_matrix), k=1).astype(np.bool))
+to_drop = [column for column in upper.columns if any(upper[column] > 0.7)]
