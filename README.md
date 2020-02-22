@@ -4,6 +4,9 @@ Jakub Krezel
 Monika Sienkiewicz
 Ania Walczuk
 
+Sprint 1:
+Kuba - Oczyszczenie zbioru danych
+Ola i Patrycja -podział losoowy zbioru na cz. treningową i cz. walidacyjną
 
 
 import pandas as pd
