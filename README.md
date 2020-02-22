@@ -1,14 +1,18 @@
-Patrycja Dąbrowska
-Ola Dzido
-Jakub Krezel
-Monika Sienkiewicz
-Ania Walczuk
+Patrycja ***Dąbrowska***
+Ola ***Dzido***
+Jakub ***Krezel***
+Monika ***Sienkiewicz***
+Ania ***Walczuk***
 
-Sprint 1:
+#Sprint 1:
 Kuba - Oczyszczenie zbioru danych
 Ola i Patrycja -podział losoowy zbioru na cz. treningową i cz. walidacyjną
+#Sprint 2:
+Kuba - SVM
+Ola i Patrycja - kNN
+Ania i Monika - Decision Tree
 
-
+----------------------------------------
 import pandas as pd
 import numpy as np
 
