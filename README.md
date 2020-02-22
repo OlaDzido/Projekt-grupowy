@@ -10,7 +10,7 @@ Ola i Patrycja -podział losoowy zbioru na cz. treningową i cz. walidacyjną
 
 
 import pandas as pd
-
+import numpy as np
 
 df = pd.read_csv("Adult_train.tab", delimiter="\t")
 df.drop(index=0, inplace=True)
