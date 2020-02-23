@@ -20,6 +20,10 @@ Weryfikacja modeli
 ## Sprint 5:
 Test danych bez etykiety
 
+## Sprint 6:
+Prezentacja graficzna wyniku klasyfikacji i testowania - Ania i Monika
+Uczenie zespołowe - Patrycja, Ola, Kuba
+
 ----------------------------------------
 import pandas as pd
 import numpy as np
