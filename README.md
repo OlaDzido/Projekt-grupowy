@@ -15,10 +15,10 @@ Ania i Monika - Decision Tree
 Random Forest
 
 ## Sprint 4:
-Weryfikacja modeli i wybranie algorytmu o najbardziej precyzyjnych parametrach
+Weryfikacja modeli
 
 ## Sprint 5:
-Test modelu na podstawie RandomForest
+Test danych bez etykiety
 
 ----------------------------------------
 import pandas as pd

@@ -6,12 +6,14 @@ from sklearn.model_selection import train_test_split
 
 
 #### MODELS ####
-pickle_in = open("RFadultModel.pickle", "rb")
-rf = pickle.load(pickle_in)
-pickle_in = open("KnnAdultModel.pickle", "rb")
-knn = pickle.load(pickle_in)
-pickle_in = open("DTAdultModel.pickle", "rb")
-dt = pickle.load(pickle_in)
+pickle_in_rf = open("RFadultModel.pickle", "rb")
+rf = pickle.load(pickle_in_rf)
+pickle_in_knn = open("KnnAdultModel.pickle", "rb")
+knn = pickle.load(pickle_in_knn)
+pickle_in_dt = open("DTAdultModel.pickle", "rb")
+dt = pickle.load(pickle_in_dt)
+pickle_in_svm = open("SvcAdultModel.pickle", "rb")
+svm = pickle.load(pickle_in_svm)
 
 
 ### EXAM DATA OPENING ###
@@ -25,16 +27,17 @@ for col in data.head(0):
 corr_matrix = data.corr().abs()
 upper = corr_matrix.where(np.triu(np.ones_like(corr_matrix), k=1).astype(np.bool))
 to_drop = [column for column in upper.columns if any(upper[column] > 0.7)]
-df = data.drop(data[to_drop], axis=1)
+data = data.drop(data[to_drop], axis=1)
 
 ### EXAM ###
 
 predictionsRF = rf.predict(data)
 predictionsDT = dt.predict(data)
 predictionsKNN = knn.predict(data)
-
+predictionsSVM = svm.predict(data)
 
 ### RESULTS ###
 print(f"RF : {predictionsRF}")
 print(f"DT : {predictionsDT}")
 print(f"KNN : {predictionsKNN}")
+print(f"SVM : {predictionsSVM}")

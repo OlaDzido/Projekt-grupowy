@@ -29,8 +29,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffl
 
 ##################### KNN MODEL ###############################
 
-pickle_in = open("KnnAdultModel.pickle", "rb")
-knn = pickle.load(pickle_in)
+pickle_in_knn = open("KnnAdultModel.pickle", "rb")
+knn = pickle.load(pickle_in_knn)
 knn_pred = knn.predict(X_test)
 
 print("XXXXXXXXXXXXX")
@@ -41,8 +41,8 @@ print(classification_report(y_test,knn_pred))
 
 ##################### RF MODEL ###############################
 
-pickle_in = open("RFadultModel.pickle", "rb")
-rf = pickle.load(pickle_in)
+pickle_in_rf = open("RFadultModel.pickle", "rb")
+rf = pickle.load(pickle_in_rf)
 rf_pred = rf.predict(X_test)
 
 print("XXXXXXXXXXXXX")
@@ -54,8 +54,8 @@ print(classification_report(y_test,rf_pred))
 
 ##################### DT MODEL ###############################
 
-pickle_in = open("DTAdultModel.pickle", "rb")
-dt = pickle.load(pickle_in)
+pickle_in_dt = open("DTAdultModel.pickle", "rb")
+dt = pickle.load(pickle_in_dt)
 dt_pred = dt.predict(X_test)
 
 print("XXXXXXXXXXXXX")
@@ -65,6 +65,17 @@ print(confusion_matrix(y_test,dt_pred))
 print(classification_report(y_test,dt_pred))
 
 
+##################### SVM MODEL ###############################
+
+pickle_in_svm = open("SvcAdultModel.pickle", "rb")
+svm = pickle.load(pickle_in_svm)
+svm_pred = svm.predict(X_test)
+
+print("XXXXXXXXXXXXX")
+print("SVM")
+print(dt.score(X_test, y_test))
+print(confusion_matrix(y_test, dt_pred))
+print(classification_report(y_test, dt_pred))
 
 #################### MODELS EXAM #########################
 
@@ -79,3 +90,4 @@ corr_matrix = df.corr().abs()
 upper = corr_matrix.where(np.triu(np.ones_like(corr_matrix), k=1).astype(np.bool))
 to_drop = [column for column in upper.columns if any(upper[column] > 0.7)]
 df = df.drop(df[to_drop], axis=1)"""
+
