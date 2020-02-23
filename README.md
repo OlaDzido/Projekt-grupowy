@@ -4,15 +4,21 @@ Jakub ***Krezel***
 Monika ***Sienkiewicz***
 Ania ***Walczuk***
 
-# Sprint 1:
+## Sprint 1:
 Kuba - Oczyszczenie zbioru danych
 Ola i Patrycja -podział losoowy zbioru na cz. treningową i cz. walidacyjną
-# Sprint 2:
+## Sprint 2:
 Kuba - SVM
 Ola i Patrycja - kNN
 Ania i Monika - Decision Tree
-# Sprint 3:
+## Sprint 3:
 Random Forest
+
+## Sprint 4:
+Weryfikacja modeli i wybranie algorytmu o najbardziej precyzyjnych parametrach
+
+## Sprint 5:
+Test modelu na podstawie RandomForest
 
 ----------------------------------------
 import pandas as pd
