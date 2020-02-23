@@ -42,7 +42,7 @@ for k in range(25, 75):
     dane[k] = [trainig_score, test_score]
 
     if test_score >= 0.85:
-        with open("RLadultModel.pickle", "wb") as f:
+        with open("RFadultModel.pickle", "wb") as f:
             pickle.dump(clf, f)
 
 
