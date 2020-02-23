@@ -34,7 +34,7 @@ for k in range(25, 75):
     clf = RandomForestClassifier(n_estimators=100,
                                random_state=k,
                                max_features='auto',
-                               n_jobs=-1, verbose=1)
+                               n_jobs=-1, verbose=0)
     clf.fit(X_train, y_train)
 
     trainig_score = clf.score(X_train, y_train)
